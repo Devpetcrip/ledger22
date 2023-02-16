@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://www.ledger.com/wp-content/uploads/2021/11/Ledger_favicon.png" sizes="32x32">
+    <link rel="icon" href="https://www.ledger.com/wp-content/uploads/2021/11/Ledger_favicon.png" sizes="192x192">
+    <link href="./ledger_files/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./ledger_files/css2.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./ledger_files/style.css">
+    <title>Hardware Wallet | Ledger</title>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <img src="./ledger_files/ledger-logo-long.svg" alt="logo" width="10%">
+        </div>
+    </nav>
+    <header class="center-text">
+        <h1>SELECT YOUR DEVICE</h1>
+    </header>
+    <main>
+        <ul>
+            <div class="green">
+                <div>
+                    <img src="./ledger_files/02_4_large.png" alt="">
+                </div>
+                <h3>Ledger Nano S</h3>
+                <button class="mybtn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="myFunction()">Select</button>
+            </div>
+            <div class="yellow">
+                <div>
+                    <img src="./ledger_files/ledger-nano-x-semi-closed_large.png" alt="">
+                </div>
+                <h3>Ledger Nano X</h3>
+                <button class="mybtn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="myFunction()">Select</button>
+            </div>
+            <div class="blue">
+                <div>
+                    <img src="./ledger_files/02_4_large.png" alt="">
+                </div>
+                <h3>Ledger Nano S Plus</h3>
+                <button class="mybtn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="myFunction()">Select</button>
+            </div>
+        </ul>
+        <div class="back-btn">
+            <a href="">
+                <button>Back</button>
+            </a>
+        </div>
+    </main>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="width: fit-content;">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div> -->
+                <div class="modal-body white-bg px-50 mx-auto text-center" style="width: fit-content; border-radius: 8px;">
+                    <div class="lds-ring">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="mt-3">
+                        <small class="site-blue" id="erro-btn" style="font-weight: bold;">
+                            Connecting ... Please wait
+                        </small>
+                    </div>
+                </div>
+                <div class="modal-footer" style="display: none;" id="modal-foot">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="../import/importledger.html"><button type="button" class="btn btn-primary">Connect manually</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="./ledger_files/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // function showBtn() {
+        //     document.getElementById('modal-foot').style.display = 'block';
+        //     console.log('work o')
+        // }
+
+
+        function myFunction() {
+            setTimeout(showBtn, 5000);
+        }
+
+        function showBtn() {
+            document.getElementById("erro-btn").innerHTML = "Failed...connect manually";
+            document.getElementById('modal-foot').style.display = 'block';
+        }
+    </script>
+
+</body>
+
+</html>
